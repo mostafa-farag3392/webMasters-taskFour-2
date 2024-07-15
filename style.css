@@ -1,0 +1,77 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    width: 300px;
+    height: 300px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-items: center;
+}
+
+.child {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    overflow: hidden;
+    align-items: center;
+    line-height: 75px;
+}
+
+/* Flexbox Method */
+.parent.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Absolute Positioning Method */
+.parent.absolute {
+    position: relative;
+}
+
+.parent.absolute .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* CSS Grid Method */
+.parent.grid {
+    display: grid;
+    place-items: center;
+}
+
+/* Transform Method */
+.parent.transform {
+    position: relative;
+}
+
+.parent.transform .child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Flexbox Align Method */
+.parent.flexbox-align {
+    display: flex;
+    align-items: center;
+}
+
+.parent.flexbox-align .child {
+    margin: auto; /* Centers vertically and horizontally */
+}
+
